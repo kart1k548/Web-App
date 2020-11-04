@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="adminstyle.css">  
+    </head>
+    <body>
+<h1>Admin Page</h1>
+    <form action="/admin/logout?_method=DELETE" method="POST">
+      <button type="submit" class="btn btn-lg btn-primary">Log Out</button>
+    </form>
+<div class="container">
+  <div class="row">
+  <div class="col-md-12">
+  <h1>Users List</h1>
+  </div>
+  </div>
+  <div class="row">
+  <div class="col-md-12">
+  <table class="table table-striped">
+  <thead class="thead-dark">
+  <tr>
+  <th scope="col">SID</th>
+  <th scope="col">Seller's Name</th>
+  <th scope="col">Seller's Email</th>
+  <th scope="col">Item Name</th>
+  <th scope="col">Quantity</th>
+  </tr>
+  </thead>
+  {{#rows}}
+  <tr>
+  <td>{{uid}}</td>
+  <td>{{sname}}</td>
+  <td>{{email}}</td>
+  <td>{{iname}}</td>
+  <td>{{count}}</td>
+  </tr>
+  {{/rows}}
+  </table>
+  </div>
+  </div>
+  </div>
+</body>
+</html>

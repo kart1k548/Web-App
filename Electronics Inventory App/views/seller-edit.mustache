@@ -1,0 +1,16 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    </head>
+    <body>
+        <h1>Edit Item Here</h1>
+        <form action="/seller/edit/{{item.itid}}" method="post">
+        <input type="text" name="uid" value="{{item.uid}}" placeholder=""/>
+        <input type="text" name="name" value="{{item.name}}" placeholder=""/>
+        <input type="text" name="brand" value="{{item.brand}}" placeholder=""/>
+        <input type="text" name="count" value="{{item.count}}" placeholder=""/>
+        <button class="btn btn-success" type="submit">Save</button>
+         <a href="/seller" class="btn btn-danger">Back</a>
+        </form>
+    </body>
+</html>

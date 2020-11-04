@@ -1,0 +1,56 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="adminstyle.css">  
+    </head>
+    <body>
+<h1>Seller Page</h1>
+<div class="container">
+<form action="/seller/logout?_method=DELETE" method="POST">
+      <button type="submit" class="btn btn-lg btn-primary">Log Out</button>
+    </form>
+  <div class="row">
+  <div class="col-md-12">
+  <h1>Items List</h1>
+  <div class="add">
+    <a href="/seller/add" class="btn btn-primary">Add Item</a>
+  </div>
+  </div>
+  </div>
+  <div class="row">
+  <div class="col-md-12">
+  <table class="table table-striped">
+  <thead class="thead-dark">
+  <tr>
+  <th scope="col">ItemID</th>
+  <th scope="col">SID</th>
+  <th scope="col">Item Name</th>
+  <th scope="col">Brand</th>
+  <th scope="col">Quantity</th>
+  <th scope="col">Edit</th>
+  <th scope="col">Delete</th>
+  </tr>
+  </thead>
+  {{#rows}}
+  <tr>
+  <td>{{itid}}</td>
+  <td>{{uid}}</td>
+  <td>{{iname}}</td>
+  <td>{{brand}}</td>
+  <td>{{count}}</td>
+        <td>
+        <a class="btn btn-success" href="/seller/edit/{{itid}}">Edit</a>
+        </td>
+        <td>
+        <form action="/seller/delete/{{itid}}" method="post">
+        <button class="btn btn-danger" type="Submit">Delete</button>
+        </form>
+        </td>
+  </tr>
+  {{/rows}}
+  </table>
+  </div>
+  </div>
+  </div>
+</body>
+</html>
